@@ -23,7 +23,7 @@ this repository including its own documentation.
 
 Please feel free to clone this repository and submit pull requests in
 order to make improvements to these plans. For any further questions,
-please email the [Endocode Habitat Team
-<habitat@endocode.com>](mailto:habitat@endocode.com). Support for
+please email the Endocode Habitat Team
+[<habitat@endocode.com>](mailto:habitat@endocode.com). Support for
 Habitat is avialable on the [Habitat community Slack
 channel](http://slack.habitat.sh).
