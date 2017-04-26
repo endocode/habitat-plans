@@ -9,10 +9,10 @@ lifecycle into the hands of service developers.
 This repository provides the sources for building Enterprise-ready
 (scalable and health-checked) Habitat plans for:
 
-- Cratedb
-- Drupal
+- Cratedb: (files) - ([tasks](https://github.com/endocode/habitat-plans/projects/3))
+- Drupal: (files) - ([tasks](https://github.com/endocode/habitat-plans/projects/2))
 - etcd
-- Jenkins
+- Jenkins: (files) - ([tasks](https://github.com/endocode/habitat-plans/projects/1))
 - jtty
 - Postfix
 
@@ -34,4 +34,4 @@ This repository has a project for tracking improvements to each plan;
 each plan has its own Kanban board. These boards are used for tracking
 who is working on which improvements. If you have a *bug* to submit,
 please use the Github issue tracker for this repository. Bugs will
-eventualy be mapped to task on a plan's Janban board.
+eventualy be mapped to task on a plan's Kanban board.
