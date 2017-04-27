@@ -1,0 +1,9 @@
+#!/bin/sh
+cd {{pkg.svc_path}}
+export ETCD_NAME="{{cfg.etcd-name}}"
+export ETCD_DATA_DIR="{{cfg.etcd-data-dir}}"
+export ETCD_LISTEN_CLIENT_URLS="{{cfg.etcd-listen-client-urls}}"
+export ETCD_LISTEN_PEER_URLS="{{cfg.etcd-listen-peer-urls}}"
+export ETCD_ADVERTISE_CLIENT_URLS="{{cfg.etcd-advertise-client-urls}}"
+export ETCD_ADVERTISE_PEER_URLS="{{cfg.etcd-advertise-peer-urls}}"
+exec etcd 2>&1

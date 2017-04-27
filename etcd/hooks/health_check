@@ -1,0 +1,15 @@
+#!/bin/sh
+
+raw_data="$(wget -qO - "{{sys.ip}}:{{cfg.etcd-client-end}}/health" | grep "true")"
+status="$(echo "${raw_data::-1}" | cut -d " " -f 2)"
+
+case $status in
+	"true")
+		rc=0 ;;
+	"false")
+		rc=2 ;;
+	*)
+		rc=3 ;;
+esac
+
+exit $rc
