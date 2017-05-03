@@ -28,11 +28,11 @@ network.publish_host: {{cfg.network.publish_host}}
 
 # Ports
 
-http.port: {{cfg.http.http_port}}
+http.port: {{cfg.http.port}}
 http.publish_port: {{cfg.http.publish_port}}
-transport.tcp.port: {{cfg.transport.tcp.tcp_port}}
+transport.tcp.port: {{cfg.transport.tcp.port}}
 transport.publish_port: {{cfg.transport.publish_port}}
-psql.port: {{cfg.psql.psql_port}}
+psql.port: {{cfg.psql.port}}
 
 # Paths
 
