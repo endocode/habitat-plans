@@ -11,7 +11,11 @@ node.name: {{cfg.node.name}}
 
 # Node Types
 
-node.master: {{cfg.node.master}}
+{{#if svc.me.leader ~}}
+  node.master: true
+{{else ~}}
+  node.master: false
+{{/if ~}}
 node.data: {{cfg.node.data}}
 node.client: {{cfg.node.client}}
 node.local: {{cfg.node.local}}
@@ -117,7 +121,9 @@ discovery.zen.publish_timeout: {{cfg.discovery.zen.publish_timeout}}
 
 ## Discovery: Unicast Host Discovery
 
-discovery.zen.ping.unicast.hosts: {{cfg.discovery.zen.ping.unicast.hosts}}
+{{#if svc.me.follower ~}}
+  discovery.zen.ping.unicast.hosts: {{#with svc.leader as |leader|}} {{leader.sys.ip}} {{/with}}
+{{/if ~}}
 disovery.type: {{cfg.discovery.type}}
 
 ## Discovery: via DNS

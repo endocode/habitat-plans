@@ -34,7 +34,6 @@
 
 [node]
   name = ""
-  master = "true"
   data = "true"
   client = "false"
   local = "false"
