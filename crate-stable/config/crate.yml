@@ -26,7 +26,7 @@ node.sql.read_only: {{cfg.node.sql.read_only}}
 
 # Hosts
 
-network.host: {{cfg.network.host}}
+network.host: {{sys.ip}}
 network.bind_host: {{cfg.network.bind_host}}
 network.publish_host: {{cfg.network.publish_host}}
 

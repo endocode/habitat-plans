@@ -42,8 +42,7 @@
     read_only = "false"
 
 [network]
-  host = "0.0.0.0"
-  bind_host = "0.0.0.0"
+  bind_host = ""
   publish_host = ""
 
 [http]
