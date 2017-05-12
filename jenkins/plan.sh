@@ -1,7 +1,7 @@
 pkg_origin=endocode
 pkg_name=jenkins
 pkg_version=2.46.1
-pkg_maintainer="Endocode Habitta Team <habitat@endocode.com>"
+pkg_maintainer="Endocode Habitat Team <habitat@endocode.com>"
 pkg_license=('mit')
 pkg_upstream_url=https://jenkins.io/
 pkg_source=http://mirrors.jenkins.io/war-stable/${pkg_version}/${pkg_name}.war
