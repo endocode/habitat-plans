@@ -8,7 +8,8 @@ pkg_source=http://mirrors.jenkins.io/war-stable/${pkg_version}/${pkg_name}.war
 pkg_shasum="33a3f4d983c6188a332291e1d974afa0a2ee96a0ae3cb6dd4f2098086525f9f1"
 pkg_deps=(core/jdk8)
 pkg_exports=(
-    [web]=web_port
+    [web]=jenkins.httpPort
+    [ajp13]=jenkins.ajp13Port
 )
 pkg_svc_user="root"
 

@@ -5,4 +5,4 @@ exec 2>&1
 export JAVA_HOME=$(hab pkg path core/jdk8)
 export JENKINS_HOME={{pkg.svc_data_path}}
 
-exec java -jar {{pkg.path}}/jenkins.war --httpPort={{cfg.web_port}}
+exec java -jar {{pkg.path}}/jenkins.war
