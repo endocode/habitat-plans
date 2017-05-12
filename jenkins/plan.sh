@@ -1,17 +1,12 @@
 pkg_origin=endocode
 pkg_name=jenkins
-pkg_version=2.46.1
+pkg_version=2.46.2
 pkg_maintainer="Endocode Habitat Team <habitat@endocode.com>"
 pkg_license=('mit')
 pkg_upstream_url=https://jenkins.io/
 pkg_source=http://mirrors.jenkins.io/war-stable/${pkg_version}/${pkg_name}.war
-pkg_shasum="33a3f4d983c6188a332291e1d974afa0a2ee96a0ae3cb6dd4f2098086525f9f1"
+pkg_shasum="aa7f243a4c84d3d6cfb99a218950b8f7b926af7aa2570b0e1707279d464472c7"
 pkg_deps=(core/jdk8)
-pkg_exports=(
-    [web]=jenkins.httpPort
-    [ajp13]=jenkins.ajp13Port
-)
-pkg_svc_user="root"
 
 do_unpack() {
     return 0
