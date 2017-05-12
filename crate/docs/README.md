@@ -3,6 +3,9 @@ Endocode Habitat Maintainers <habitat@endocode.com>
 
 ## Description
 
+- [www](https://crate.io)
+- [Docs](https://crate.io/docs/reference/)
+
 > CrateDB combines SQL and search in a way that’s simple to scale.
 
 CrateDB is an open source SQL database with a ground-breaking distributed design:
