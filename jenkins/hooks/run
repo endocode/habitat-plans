@@ -8,7 +8,9 @@ export JENKINS_HOME={{pkg.svc_data_path}}
 exec java -jar {{pkg.path}}/jenkins.war \
     --httpsPort={{cfg.jenkins.https.port}} \
     --httpsListenAddress={{cfg.jenkins.https.listen_address}} \
-    {{#if cfg.jenkins.htts.certificate ~}}
-      --httpsCertificate={{cfg.jenkins.https.certificate}} \
-      --httpsPrivateKey={{cfg.jenkins.https.private_key}}
+    {{#if cfg.jenkins.https.certificate ~}}
+      {{#if cfg.jenkins.https.private_key ~}}
+        --httpsCertificate={{cfg.jenkins.https.certificate}} \
+        --httpsPrivateKey={{cfg.jenkins.https.private_key}}
+      {{/if ~}}
     {{/if ~}}
