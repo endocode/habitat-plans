@@ -9,12 +9,7 @@ lifecycle into the hands of service developers.
 This repository provides the sources for building Enterprise-ready
 (scalable and health-checked) Habitat plans for:
 
-- Cratedb: (files) - ([tasks](https://github.com/endocode/habitat-plans/projects/3))
-- Drupal: (files) - ([tasks](https://github.com/endocode/habitat-plans/projects/2))
-- etcd
-- Jenkins: (files) - ([tasks](https://github.com/endocode/habitat-plans/projects/1))
-- jtty
-- Postfix
+- Cratedb: ([files](https://github.com/endocode/habitat-plans/crate)) - ([tasks](https://github.com/endocode/habitat-plans/projects/3))
 
 Plans in this repository are all available in the `Endocode` origin in
 app.habitat.sh and can be added to your Habitat studio with: `hab
