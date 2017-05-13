@@ -10,6 +10,7 @@ This repository provides the sources for building Enterprise-ready
 (scalable and health-checked) Habitat plans for:
 
 - Cratedb: ([files](https://github.com/endocode/habitat-plans/tree/master/crate)) - ([tasks](https://github.com/endocode/habitat-plans/projects/3)) - ([docs](https://github.com/endocode/habitat-plans/tree/master/crate/docs))
+- Drupal: ([files](https://github.com/endocode/habitat-plans/tree/master/drupal))
 - Jenkins: ([files](https://github.com/endocode/habitat-plans/tree/master/jenkins)) - ([tasks](https://github.com/endocode/habitat-plans/projects/4))
 
 Plans in this repository are all available in the `Endocode` origin in
