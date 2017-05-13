@@ -1,0 +1,17 @@
+#!/bin/bash
+
+exec 2>&1
+
+# Deploy Drupal
+cp -r {{pkg.path}}/drupal/* {{pkg.svc_data_path}}
+chmod +x {{pkg.svc_data_path}}
+chown -R hab:hab {{pkg.svc_data_path}}
+
+cp -r {{pkg.svc_config_path}}/nginx.conf \
+      {{pkgPathFor "core/nginx"}}/config/nginx.conf
+
+# Copy the php-fom config into position
+cp -n {{pkgPathFor "core/php"}}/etc/php-fpm.d/www.conf.default \
+      {{pkgPathFor "core/php"}}/etc/php-fpm.d/www.conf
+
+hab service load nginx --group {{svc.group}} --force
