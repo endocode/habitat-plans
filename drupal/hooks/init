@@ -2,11 +2,7 @@
 
 exec 2>&1
 
-# Deploy Drupal
-cp -r {{pkg.path}}/drupal/* {{pkg.svc_data_path}}
-chmod +x {{pkg.svc_data_path}}
-chown -R hab:hab {{pkg.svc_data_path}}
-
+# Copy the nginx config into position
 cp -r {{pkg.svc_config_path}}/nginx.conf \
       {{pkgPathFor "core/nginx"}}/config/nginx.conf
 
