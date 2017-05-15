@@ -1,0 +1,16 @@
+# Host
+etcd-name: {{sys.ip}}
+etcd-data-dir: {{cfg.etcd-data-dir}}
+
+etcd-host-ip: {{sys.ip}}
+
+etcd-client-end: {{cfg.etcd-client-end}}
+etcd-server-end: {{cfg.etcd-server-end}}
+
+etcd-auto-tls: {{cfg.etcd-auto-tls}}
+
+etcd-listen-client-urls: {{cfg.etcd-listen-client-urls}}
+etcd-listen-peer-urls-only: {{cfg.etcd-listen-peer-urls}}
+etcd-advertise-client-urls-only: {{cfg.etcd-advertise-client-urls}}
+etcd-initial-advertise-peer-urls-only: {{cfg.etcd-initial-advertise-peer-urls}}
+etcd-discovery: {{cfg.etcd-discovery}}

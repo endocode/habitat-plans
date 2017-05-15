@@ -1,0 +1,18 @@
+#!/bin/sh
+export http_proto="http"
+
+cd {{pkg.svc_path}}
+
+if [ "{{cfg.etcd-auto-tls}}" = "true" ] ; then
+	http_proto="https"
+	export ETCD_AUTO_TLS="true"
+	export ETCD_PEER_AUTO_TLS="true"
+fi
+
+export ETCD_NAME="{{cfg.etcd-name}}"
+export ETCD_DATA_DIR="{{cfg.etcd-data-dir}}"
+export ETCD_LISTEN_CLIENT_URLS="${http_proto}://{{sys.ip}}:{{cfg.etcd-client-end}}"
+export ETCD_LISTEN_PEER_URLS="${http_proto}://{{sys.ip}}:{{cfg.etcd-server-end}}"
+export ETCD_ADVERTISE_CLIENT_URLS="${http_proto}://{{sys.ip}}:{{cfg.etcd-client-end}}"
+export ETCD_INITIAL_ADVERTISE_PEER_URLS="${http_proto}://{{sys.ip}}:{{cfg.etcd-server-end}}"
+exec etcd 2>&1
