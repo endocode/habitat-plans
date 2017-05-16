@@ -15,6 +15,7 @@ pkg_exports=(
     [postgres]=psql.port
 )
 pkg_exposes=(http transport postgres)
+pkg_upstream_url="https://crate.io"
 pkg_description="CrateDB is an open source SQL database with a ground-breaking distributed design."
 
 do_download() {
