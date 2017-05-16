@@ -16,8 +16,17 @@ CrateDB is an open source SQL database with a ground-breaking distributed design
 
 ## Usage
 
-- On the first node: `hab sup start endocode/crate --topology leader`
-- On subsequent nodes: `hab sup start endocode/crate --topology leader --peer <first node ip>`
+- On the first node: 
+
+```
+hab sup start endocode/crate --topology leader
+```
+
+- On subsequent nodes: 
+
+```
+hab sup start endocode/crate --topology leader --peer <first node ip>
+```
 
 On all nodes the following ports are available:
 
@@ -41,7 +50,9 @@ These errors can be fixed by applying a specific config to the service group:
 ```
 Copy the above config into a TOML file and set the value of these config options according the instructions in the administration interface and then apply them:
 
-`hab config apply --peer <first node ip> crate.default 1 <your.toml>`
+```
+hab config apply --peer <first node ip> crate.default 1 <your.toml>
+```
 
 ### Notes
 
