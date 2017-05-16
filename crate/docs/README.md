@@ -58,4 +58,4 @@ hab config apply --peer <first node ip> crate.default 1 <your.toml>
 
 - CrateDB has a _lot_ of configuration. This package has been designed to minimise the amount of configuration that needs to be adjusted by the administrator.
 - The configuration for this plan has been written so that the lead Habitat supervisor will always been the CrateDB master node.
-- hab v0.22/0.23 due to a bug in domain resolution inside these versions of Habitat, CrateDB can be slower than expected in building clusters and applying configuration updates. After the cluster is built, overall database performance is unaffected.
+- Using `hab v0.22/0.23`, due to a bug in domain resolution inside these versions of Habitat, CrateDB can be slower than expected in building clusters and applying configuration updates. After the cluster is built, overall database performance is unaffected.
