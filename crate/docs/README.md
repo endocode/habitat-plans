@@ -41,14 +41,20 @@ errors related to Crate's in-built election algorithm:
 
 ![Errors in the CrateDB admin UI](cratedb-errors.png)
 
-These errors can be fixed by applying a specific config to the service group:
+These errors can be fixed by applying a specific config to the service group, either at start or later:
 
 ```bash
 [gateway]
   expected_nodes = 
   recover_after_nodes =
 ```
-Copy the above config into a TOML file and set the value of these config options according the instructions in the administration interface and then apply them:
+Copy the above config into a TOML file and set the value of these config options according the instructions in the administration interface and then apply them at start:
+
+```
+HAB_CRATE="$cat(cat config.toml)" hab start endocode/crate --topology leader
+```
+
+...or later:
 
 ```
 hab config apply --peer <first node ip> crate.default 1 <your.toml>
