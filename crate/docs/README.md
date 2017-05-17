@@ -51,7 +51,7 @@ These errors can be fixed by applying a specific config to the service group, ei
 Copy the above config into a TOML file and set the value of these config options according the instructions in the administration interface and then apply them at start:
 
 ```
-HAB_CRATE="$cat(cat config.toml)" hab start endocode/crate --topology leader
+HAB_CRATE="$cat(cat <your.toml>)" hab start endocode/crate --topology leader
 ```
 
 ...or later:
