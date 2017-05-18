@@ -7,8 +7,8 @@ etcd-data-dir = "/var/lib/etcd"
 etcd-client-end = 2379
 etcd-server-end = 2380
 
-etcd-auto-tls = "true"
-etcd-http-proto = "https"
+etcd-auto-tls = "false"
+etcd-http-proto = "http"
 
 etcd-discovery = ""
 
