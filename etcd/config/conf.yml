@@ -16,9 +16,9 @@ etcd-http-proto: "http"
 {{/if ~}}
 
 etcd-listen-client-urls: {{cfg.etcd-listen-client-urls}}
-etcd-listen-peer-urls-only: {{cfg.etcd-listen-peer-urls}}
-etcd-advertise-client-urls-only: {{cfg.etcd-advertise-client-urls}}
-etcd-initial-advertise-peer-urls-only: {{cfg.etcd-initial-advertise-peer-urls}}
+etcd-listen-peer-urls: {{cfg.etcd-listen-peer-urls}}
+etcd-advertise-client-urls: {{cfg.etcd-advertise-client-urls}}
+etcd-initial-advertise-peer-urls: {{cfg.etcd-initial-advertise-peer-urls}}
 
 etcd-discovery: {{cfg.etcd-discovery}}
 etcd-initial-cluster-state: {{cfg.etcd-initial-cluster-state}}
