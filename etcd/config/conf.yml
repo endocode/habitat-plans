@@ -1,6 +1,6 @@
 # Host
-etcd-name: {{sys.ip}}
-etcd-data-dir: {{cfg.etcd-data-dir}}
+etcd-name: {{cfg.etcd-name}}
+etcd-data-dir: {{pkg.svc_data_path}}
 
 etcd-host-ip: {{sys.ip}}
 
