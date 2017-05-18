@@ -1,5 +1,7 @@
 #!/bin/sh
 
+exec 2>&1
+
 proto="{{cfg.etcd-http-proto}}"
 
 cd {{pkg.svc_path}}
@@ -10,12 +12,16 @@ if [ "{{cfg.etcd-auto-tls}}" = "true" ] ; then
 fi
 
 
+nodes="{{#each svc.members ~}}{{sys.ip}}=${proto}://"{{sys.ip}}:{{cfg.etcd-server-end}}",{{/each ~}}"
+
+
 export ETCD_NAME="{{sys.ip}}"
-export ETCD_DATA_DIR="{{cfg.etcd-data-dir}}"
+export ETCD_DATA_DIR="{{pkg.svc_data_path}}"
 export ETCD_LISTEN_CLIENT_URLS="${proto}://{{sys.ip}}:{{cfg.etcd-client-end}}"
 export ETCD_LISTEN_PEER_URLS="${proto}://{{sys.ip}}:{{cfg.etcd-server-end}}"
 export ETCD_ADVERTISE_CLIENT_URLS="${proto}://{{sys.ip}}:{{cfg.etcd-client-end}}"
 export ETCD_INITIAL_ADVERTISE_PEER_URLS="${proto}://{{sys.ip}}:{{cfg.etcd-server-end}}"
-export ETCD_INITIAL_CLUSTER_STATE="{{cfg.etcd-initial-cluster-state}}"
-export ETCD_INITIAL_CLUSTER="{{cfg.etcd-initial-cluster}}"
-exec etcd 2>&1
+#export ETCD_INITIAL_CLUSTER_STATE="{{cfg.etcd-initial-cluster-state}}"
+#export ETCD_INITIAL_CLUSTER="$nodes"
+
+exec etcd 
