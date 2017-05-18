@@ -8,6 +8,7 @@ etcd-client-end = 2379
 etcd-server-end = 2380
 
 etcd-auto-tls = "true"
+etcd-http-proto = "https"
 
 etcd-discovery = ""
 
@@ -15,3 +16,5 @@ etcd-listen-client-urls = "http://0.0.0.0"
 etcd-listen-peer-urls = "http://0.0.0.0"
 etcd-advertise-client-urls = "http://0.0.0.0"
 etcd-initial-advertise-peer-urls = "http://0.0.0.0"
+
+etcd-initial-cluster-state = "new"

@@ -9,8 +9,16 @@ etcd-server-end: {{cfg.etcd-server-end}}
 
 etcd-auto-tls: {{cfg.etcd-auto-tls}}
 
+{{#if cfg.etcd-auto-tls ~}}
+etcd-http-proto: "https"
+{{else ~}}
+etcd-http-proto: "http"
+{{/if ~}}
+
 etcd-listen-client-urls: {{cfg.etcd-listen-client-urls}}
 etcd-listen-peer-urls-only: {{cfg.etcd-listen-peer-urls}}
 etcd-advertise-client-urls-only: {{cfg.etcd-advertise-client-urls}}
 etcd-initial-advertise-peer-urls-only: {{cfg.etcd-initial-advertise-peer-urls}}
+
 etcd-discovery: {{cfg.etcd-discovery}}
+etcd-initial-cluster-state: {{cfg.etcd-initial-cluster-state}}
