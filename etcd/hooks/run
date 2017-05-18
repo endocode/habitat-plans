@@ -12,7 +12,7 @@ if [ "{{cfg.etcd-auto-tls}}" = "true" ] ; then
 fi
 
 
-nodes="{{#each svc.members ~}}{{sys.ip}}=${proto}://"{{sys.ip}}:{{cfg.etcd-server-end}}",{{/each ~}}"
+nodes="{{#each svc.members ~}}{{sys.ip}}=${proto}://{{sys.ip}}:{{cfg.etcd-server-end}},{{/each ~}}"
 
 
 export ETCD_NAME="{{sys.ip}}"
