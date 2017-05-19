@@ -5,3 +5,9 @@ exec 2>&1
 mkdir -p {{pkg.svc_var_path}}/data/blobs
 mkdir -p {{pkg.svc_var_path}}/work
 mkdir -p {{pkg.svc_var_path}}/logs
+
+# Certain versions of Habitat did not ship with nsswitch.conf
+if [ ! -f /etc/nsswitch.conf ]
+then
+    echo "hosts: files dns" > /etc/nsswitch.conf
+fi
