@@ -121,7 +121,7 @@ discovery.zen.publish_timeout: {{cfg.discovery.zen.publish_timeout}}
 
 ## Discovery: Unicast Host Discovery
 
-discovery.zen.ping.unicast.hosts: {{#each svc.members ~}} -{{sys.ip}},{{/each ~}}
+discovery.zen.ping.unicast.hosts: {{#each svc.members ~}} -{{sys.ip}} {{/each}}
 disovery.type: {{cfg.discovery.type}}
 
 ## Discovery: via DNS
