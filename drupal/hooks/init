@@ -15,4 +15,4 @@ cp -r {{pkg.svc_config_path}}/nginx.conf \
 cp -n {{pkgPathFor "core/php"}}/etc/php-fpm.d/www.conf.default \
       {{pkgPathFor "core/php"}}/etc/php-fpm.d/www.conf
 
-hab service load core/nginx --group {{svc.group}} --force
+hab svc load core/nginx --group {{svc.group}} --force

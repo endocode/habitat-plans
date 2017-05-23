@@ -1,4 +1,4 @@
-##################### CrateDB Configuration #######################
+##################### CrateDB Configuration ########################
 #
 # Notes: https://crate.io/docs/reference/en/1.1.2/configuration.html
 #
@@ -121,9 +121,10 @@ discovery.zen.publish_timeout: {{cfg.discovery.zen.publish_timeout}}
 
 ## Discovery: Unicast Host Discovery
 
-{{#if svc.me.follower ~}}
-  discovery.zen.ping.unicast.hosts: {{#with svc.leader as |leader|}} {{leader.sys.ip}} {{/with}}
-{{/if ~}}
+discovery.zen.ping.unicast.hosts:
+{{#each svc.members ~}}
+  - {{sys.ip}}
+{{/each}}
 disovery.type: {{cfg.discovery.type}}
 
 ## Discovery: via DNS
