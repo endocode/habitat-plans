@@ -10,9 +10,9 @@ pkg_deps=(core/jre8 core/curl)
 pkg_bin_dirs=(crate/bin)
 pkg_lib_dirs=(crate/lib)
 pkg_exports=(
-    [http]=http.port
-    [transport]=transport.tcp.port
-    [postgres]=psql.port
+    [http]=port.http
+    [transport]=port.transport
+    [postgres]=port.postgres
 )
 pkg_exposes=(http transport postgres)
 pkg_upstream_url="https://crate.io"
